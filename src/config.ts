@@ -22,6 +22,7 @@ const config: Config = {
       target: 'https://api.nasa.gov/planetary/apod',
       queryparams: {
         api_key: process.env.NASA_API_KEY,
+        thumbs: true,
       },
     },
   ],
