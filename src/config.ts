@@ -14,31 +14,14 @@ export interface Proxy extends Options {
 }
 
 const config: Config = {
-  allowedDomains: ['https://www.mauriciorobayo.com'],
+  allowedDomains: ['https://yethranayeh.github.io'],
   proxies: [
     {
-      route: '/weather',
+      route: '/nasa',
       allowedMethods: ['GET'],
-      target: 'https://api.openweathermap.org/data/2.5/weather',
+      target: 'https://api.nasa.gov/planetary/apod?thumbs=true',
       queryparams: {
-        appid: process.env.WEATHER_API_KEY,
-      },
-    },
-    {
-      route: '/ipinfo',
-      allowedMethods: ['GET'],
-      target: 'https://ipinfo.io/',
-      queryparams: {
-        token: process.env.IPINFO_TOKEN,
-      },
-    },
-    {
-      route: '/github',
-      allowedMethods: ['GET'],
-      target: 'https://api.github.com',
-      headers: {
-        Accept: 'application/vnd.github.v3+json',
-        Authorization: `Token ${process.env.GITHUB_TOKEN}`,
+        api_key: process.env.NASA_API_KEY,
       },
     },
   ],
