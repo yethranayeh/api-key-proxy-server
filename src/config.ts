@@ -19,7 +19,7 @@ const config: Config = {
     {
       route: '/nasa',
       allowedMethods: ['GET'],
-      target: 'https://api.nasa.gov/planetary/apod?thumbs=true',
+      target: 'https://api.nasa.gov/planetary/apod',
       queryparams: {
         api_key: process.env.NASA_API_KEY,
       },
