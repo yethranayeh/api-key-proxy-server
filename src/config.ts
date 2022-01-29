@@ -25,6 +25,14 @@ const config: Config = {
         thumbs: true,
       },
     },
+    {
+      route: '/weather',
+      allowedMethods: ['GET'],
+      target: 'https://api.openweathermap.org/data/2.5/weather',
+      queryparams: {
+        appid: process.env.WEATHER_API_KEY,
+      },
+    },
   ],
 };
 
