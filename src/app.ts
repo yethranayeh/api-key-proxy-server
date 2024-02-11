@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 import Debug from 'debug';
 import express from 'express';
 import { resolve } from 'path';
